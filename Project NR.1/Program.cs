@@ -25,11 +25,17 @@ namespace floorSpaceCounter
 
                 decimal floorTotal = ((decimal)floorAmount * (decimal)floorPrice);
 
+                string roundedNumber = floorTotal.ToString("0.00");
+
                 decimal flooringTime = (decimal)floorAmount / 1.85806M;
+
+                string roundedFlooringTime = flooringTime.ToString("0.00");
 
                 decimal flooringWorkCost = (decimal)flooringTime * 86;
 
-                Console.WriteLine($"Floor area is: {floorAmount} and \nthe price for the floor is: {floorTotal}EUR. It will take {flooringTime} hours to put the floor and the total cost for work will be {flooringWorkCost}EUR");
+                string roundedWorkCost = flooringWorkCost.ToString("0.00");
+
+                Console.WriteLine($"Floor area is: {floorAmount} and \nthe price for the floor is: {roundedNumber}EUR. It will take {roundedFlooringTime} hours to put the floor and the total cost for work will be {roundedWorkCost}EUR");
             }
 
             else if (answer1 == "triangle")
@@ -54,11 +60,17 @@ namespace floorSpaceCounter
 
                 decimal floorTotal = ((decimal)floorArea * (decimal)floorPrice);
 
+                string roundedNumber = floorTotal.ToString("0.00");
+
                 decimal flooringTime = (decimal)floorArea / 1.85806M;
+
+                string roundedFlooringTime = flooringTime.ToString("0.00");
 
                 decimal flooringWorkCost = (decimal)flooringTime * 86;
 
-                Console.WriteLine($"Floor area is: {floorArea} and \nthe price for the floor is: {floorTotal}EUR. It will take {flooringTime} hours to put the floor and the total cost for work will be {flooringWorkCost}EUR");
+                string roundedWorkCost = flooringWorkCost.ToString("0.00");
+
+                Console.WriteLine($"Floor area is: {floorArea} and \nthe price for the floor is: {roundedNumber}EUR. It will take {roundedFlooringTime} hours to put the floor and the total cost for work will be {roundedWorkCost}EUR");
             }
 
             else if (answer1 == "non-rectangular")
@@ -79,11 +91,17 @@ namespace floorSpaceCounter
 
                 decimal floorTotal = ((decimal)floorArea * (decimal)floorPrice);
 
+                string roundedNumber = floorTotal.ToString("0.00");
+
                 decimal flooringTime = (decimal)floorArea / 1.85806M;
 
-                decimal flooringWorkCost = (decimal)flooringTime * 86;                
+                string roundedFlooringTime = flooringTime.ToString("0.00");
 
-                Console.WriteLine($"Floor area is: {floorArea} and \nthe price for the floor is: {floorTotal}EUR. It will take {flooringTime} hours to put the floor and the total cost for work will be {flooringWorkCost}EUR");
+                decimal flooringWorkCost = (decimal)flooringTime * 86;
+
+                string roundedWorkCost = flooringWorkCost.ToString("0.00");
+
+                Console.WriteLine($"Floor area is: {floorArea} and \nthe price for the floor is: {roundedNumber}EUR. It will take {roundedFlooringTime} hours to put the floor and the total cost for work will be {roundedWorkCost}EUR");
 
             }
         }
