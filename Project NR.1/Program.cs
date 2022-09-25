@@ -61,17 +61,13 @@ namespace floorSpaceCounter
                 Console.WriteLine("Enter floor length b in meters:");
                 decimal floorLengthB = Convert.ToDecimal(Console.ReadLine());
 
-                Console.WriteLine("Enter floor length c in meters:");
-                decimal floorLengthC = Convert.ToDecimal(Console.ReadLine());
+                Console.WriteLine("Enter floor height in meters (height is the length from a to b and has 90 degrees corner with the length b or a:");
+                decimal floorLengthH = Convert.ToDecimal(Console.ReadLine());
 
                 Console.WriteLine("Enter floor price per sqm:");
                 decimal floorPrice = Convert.ToDecimal(Console.ReadLine());
 
-                decimal floorHalfPerimeter = ((decimal)floorLengthA + (decimal)floorLengthB + (decimal)floorLengthC) / 2;
-
-                decimal floorExtra = floorHalfPerimeter * ((floorHalfPerimeter - floorLengthA) + (floorHalfPerimeter - floorLengthB) + (floorHalfPerimeter - floorLengthC));
-
-                double floorArea = Math.Sqrt((double)floorExtra);
+                decimal floorArea = (decimal)floorLengthH * ((decimal)floorLengthA + (decimal)floorLengthB);
 
                 decimal floorTotal = ((decimal)floorArea * (decimal)floorPrice);
 
