@@ -25,7 +25,11 @@ namespace floorSpaceCounter
 
                 decimal floorTotal = ((decimal)floorAmount * (decimal)floorPrice);
 
-                Console.WriteLine($"Floor area is: {floorAmount} and \nthe price for the floor is: {floorTotal}EUR");
+                decimal flooringTime = (decimal)floorAmount / 1.85806M;
+
+                decimal flooringWorkCost = (decimal)flooringTime * 86;
+
+                Console.WriteLine($"Floor area is: {floorAmount} and \nthe price for the floor is: {floorTotal}EUR. It will take {flooringTime} hours to put the floor and the total cost for work will be {flooringWorkCost}EUR");
             }
 
             else if (answer1 == "triangle")
@@ -50,7 +54,11 @@ namespace floorSpaceCounter
 
                 decimal floorTotal = ((decimal)floorArea * (decimal)floorPrice);
 
-                Console.WriteLine($"Floor area is: {floorArea} and \nthe price for the floor is: {floorTotal}EUR");
+                decimal flooringTime = (decimal)floorArea / 1.85806M;
+
+                decimal flooringWorkCost = (decimal)flooringTime * 86;
+
+                Console.WriteLine($"Floor area is: {floorArea} and \nthe price for the floor is: {floorTotal}EUR. It will take {flooringTime} hours to put the floor and the total cost for work will be {flooringWorkCost}EUR");
             }
 
             else if (answer1 == "non-rectangular")
@@ -71,7 +79,12 @@ namespace floorSpaceCounter
 
                 decimal floorTotal = ((decimal)floorArea * (decimal)floorPrice);
 
-                Console.WriteLine($"Floor area is: {floorArea} and \nthe price for the floor is: {floorTotal}EUR");
+                decimal flooringTime = (decimal)floorArea / 1.85806M;
+
+                decimal flooringWorkCost = (decimal)flooringTime * 86;                
+
+                Console.WriteLine($"Floor area is: {floorArea} and \nthe price for the floor is: {floorTotal}EUR. It will take {flooringTime} hours to put the floor and the total cost for work will be {flooringWorkCost}EUR");
+
             }
         }
     }
