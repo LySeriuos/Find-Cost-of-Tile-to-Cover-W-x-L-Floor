@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Testing": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\shiranco.DESKTOP-HRN41TE\\Desktop",
+      "remoteDebugEnabled": false,
+      "nativeDebugging": true
+    }
+  }
+}
