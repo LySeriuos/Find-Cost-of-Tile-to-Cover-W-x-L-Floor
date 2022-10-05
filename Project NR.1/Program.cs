@@ -5,8 +5,10 @@ namespace floorSpaceCounter
     {
         static void Main(string[] args)
         {
-            bool validInput = false; 
-            while (!validInput) // the program looping until it gets valid user input 
+            const decimal COST_TILE = 86; // price for putting floors per hour
+            const decimal AREA_PER_HOUR = 1.85806M; // number to show how much sqm can be don in one hour
+ 
+            while (true) // the program looping until it gets valid user input 
             {
                 Console.WriteLine("Which form has your room? Write 1 if Rectangular, 2 if Triangle or 3 if Non-rectangular");
                 string answerUserInput = Console.ReadLine(); // changed to answerUserInput
@@ -14,11 +16,6 @@ namespace floorSpaceCounter
 
                 if (answerConverted != 0 && answerConverted < 4) // valid input must be between 1 and 3
                 {
-                    const decimal COST_TILE = 86; // price for putting floors per hour
-                    const decimal AREA_PER_HOUR = 1.85806M; // number to show how much sqm can be don in one hour
-
-                    // changed "if else" to "if"
-
                     Console.WriteLine("Enter floor price per sqm:");
                     decimal floorPrice = Convert.ToDecimal(Console.ReadLine());
 
@@ -109,7 +106,7 @@ namespace floorSpaceCounter
                     else
                     {
                         Console.WriteLine("You entered a wrong number, please try again!");
-                        validInput = true;
+                        continue;
                     }
 
                 }
