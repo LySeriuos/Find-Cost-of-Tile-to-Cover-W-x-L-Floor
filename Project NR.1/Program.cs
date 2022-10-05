@@ -8,7 +8,7 @@ namespace floorSpaceCounter
         static void Main(string[] args)
         {
             Console.WriteLine("Which form has your room? Write 1 if Rectangular, 2 if Triangle or 3 if Non-rectangular");
-            string answerUserInput = Console.ReadLine(); // changed answerUserInput to answerUserInput
+            string answerUserInput = Console.ReadLine(); // changed to answerUserInput
             int answerConverted = Convert.ToInt32(answerUserInput);            
 
             const decimal COST_TILE = 86; // price for putting floors per hour
@@ -31,23 +31,15 @@ namespace floorSpaceCounter
 
                 decimal floorArea = floorWidth * floorLength; // counting the floor area in sqm
 
-                decimal floorTotal = floorArea * floorPrice;  // counting price for the tiles or other material  
-
-                string roundedNumber = floorTotal.ToString("0.00"); // chaninging to a rounded numbers 
+                decimal floorTotal = (floorArea * floorPrice);  // counting price for the tiles or other material  
 
                 decimal flooringTime = floorArea / AREA_PER_HOUR; // counting how much time it will be needed to put floor
 
-                string roundedFlooringTime = flooringTime.ToString("0.00"); // 
-
                 decimal flooringWorkCost = flooringTime * COST_TILE; // counting the price for the work 
-
-                string roundedWorkCost = flooringWorkCost.ToString("0.00");
 
                 decimal totalPrice = flooringWorkCost + floorTotal; // total price for the whole project
 
-                string roundedTotalPrice = totalPrice.ToString("0.00");
-
-                Console.WriteLine($"Floor area is: {floorArea} sqm. \nThe price for the floor is: {roundedNumber}EUR. \nIt will take {roundedFlooringTime} hours to put the floor. \nThe total cost for work will be {roundedWorkCost}EUR.\nTotal price: {roundedTotalPrice}EUR ");
+                Console.WriteLine($"Floor area is: {floorArea} sqm. \nThe price for the floor is: {floorTotal.ToString("0.00")}EUR. \nIt will take {flooringTime.ToString("0.00")} hours to put the floor. \nThe total cost for work will be {flooringWorkCost.ToString("0.00")}EUR.\nTotal price: {totalPrice.ToString("0.00")}EUR ");
                 
             }
 
@@ -75,24 +67,16 @@ namespace floorSpaceCounter
 
                 decimal floorTotal = (decimal)floorArea * floorPrice;
 
-                string roundedNumber = floorTotal.ToString("0.00");
-
                 // converting numbers from double to decimal
 
                 decimal flooringTime = (decimal)floorArea / AREA_PER_HOUR;
 
-                string roundedFlooringTime = flooringTime.ToString("0.00");
-
                 decimal flooringWorkCost = flooringTime * COST_TILE;
-
-                string roundedWorkCost = flooringWorkCost.ToString("0.00");
 
                 decimal totalPrice = flooringWorkCost + floorTotal;
 
-                string roundedTotalPrice = totalPrice.ToString("0.00");
+                Console.WriteLine($"Floor area is: {floorArea} sqm. \nThe price for the floor is: {floorTotal.ToString("0.00")}EUR. \nIt will take {flooringTime.ToString("0.00")} hours to put the floor. \nThe total cost for work will be {flooringWorkCost.ToString("0.00")}EUR.\nTotal price: {totalPrice.ToString("0.00")}EUR ");
 
-                Console.WriteLine($"Floor area is: {floorArea} sqm. \nThe price for the floor is: {roundedNumber}EUR. \nIt will take {roundedFlooringTime} hours to put the floor. \nThe total cost for work will be {roundedWorkCost}EUR.\nTotal price: {roundedTotalPrice}EUR ");
-               
             }
 
             else if (answerConverted == 3) // Non-rectangular
@@ -113,22 +97,14 @@ namespace floorSpaceCounter
 
                 decimal floorTotal = floorArea * floorPrice;
 
-                string roundedNumber = floorTotal.ToString("0.00");
-
                 decimal flooringTime = floorArea / AREA_PER_HOUR;
-
-                string roundedFlooringTime = flooringTime.ToString("0.00");
 
                 decimal flooringWorkCost = flooringTime * COST_TILE;
 
-                string roundedWorkCost = flooringWorkCost.ToString("0.00");
-
                 decimal totalPrice = flooringWorkCost + floorTotal;
 
-                string roundedTotalPrice = totalPrice.ToString("0.00");
+                Console.WriteLine($"Floor area is: {floorArea} sqm. \nThe price for the floor is: {floorTotal.ToString("0.00")}EUR. \nIt will take {flooringTime.ToString("0.00")} hours to put the floor. \nThe total cost for work will be {flooringWorkCost.ToString("0.00")}EUR.\nTotal price: {totalPrice.ToString("0.00")}EUR ");
 
-                Console.WriteLine($"Floor area is: {floorArea} sqm. \nThe price for the floor is: {roundedNumber}EUR. \nIt will take {roundedFlooringTime} hours to put the floor. \nThe total cost for work will be {roundedWorkCost}EUR.\nTotal price: {roundedTotalPrice}EUR ");
-                
             }
 
             else 
