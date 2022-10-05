@@ -1,7 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using System;
-using static System.Net.Mime.MediaTypeNames;
-
+﻿
 namespace floorSpaceCounter
 {       // Program number 1
     class Program
@@ -14,7 +11,6 @@ namespace floorSpaceCounter
                 Console.WriteLine("Which form has your room? Write 1 if Rectangular, 2 if Triangle or 3 if Non-rectangular");
                 string answerUserInput = Console.ReadLine(); // changed to answerUserInput
                 int answerConverted = Convert.ToInt32(answerUserInput);
-
 
                 if (answerConverted != 0 && answerConverted < 4) // valid input must be between 1 and 3
                 {
@@ -73,8 +69,6 @@ namespace floorSpaceCounter
 
                         decimal floorTotal = (decimal)floorArea * floorPrice;
 
-                        // converting numbers from double to decimal
-
                         decimal flooringTime = (decimal)floorArea / AREA_PER_HOUR;
 
                         decimal flooringWorkCost = flooringTime * COST_TILE;
@@ -115,7 +109,7 @@ namespace floorSpaceCounter
                     else
 
                     {
-                        Console.WriteLine("You entered a wrong number, please try again! Else");
+                        Console.WriteLine("You entered a wrong number, please try again!");
                         done = true;
                     }
 
