@@ -5,8 +5,8 @@ namespace floorSpaceCounter
     {
         static void Main(string[] args)
         {
-            bool done = false; 
-            while (!done) // the program looping until it gets valid user input 
+            bool validInput = false; 
+            while (!validInput) // the program looping until it gets valid user input 
             {
                 Console.WriteLine("Which form has your room? Write 1 if Rectangular, 2 if Triangle or 3 if Non-rectangular");
                 string answerUserInput = Console.ReadLine(); // changed to answerUserInput
@@ -107,10 +107,9 @@ namespace floorSpaceCounter
                     }
 
                     else
-
                     {
                         Console.WriteLine("You entered a wrong number, please try again!");
-                        done = true;
+                        validInput = true;
                     }
 
                 }
