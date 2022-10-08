@@ -30,8 +30,7 @@ namespace floorSpaceCounter
                         decimal floorWidth = Convert.ToDecimal(Console.ReadLine());
                         Console.WriteLine("Enter floor length in meters:");
                         decimal floorLength = Convert.ToDecimal(Console.ReadLine());
-                        floorArea = floorWidth * floorLength; // counting the floor area in sqm
-                        
+                        floorArea = floorWidth * floorLength; // counting the floor area in sqm 
 
                     }
 
@@ -39,58 +38,27 @@ namespace floorSpaceCounter
                     {
                         Console.WriteLine("Enter floor length a in meters:");
                         decimal floorLengthA = Convert.ToDecimal(Console.ReadLine());
-
                         Console.WriteLine("Enter floor length b in meters:");
                         decimal floorLengthB = Convert.ToDecimal(Console.ReadLine());
-
                         Console.WriteLine("Enter floor length c in meters:");
                         decimal floorLengthC = Convert.ToDecimal(Console.ReadLine());
 
                         decimal floorHalfPerimeter = (floorLengthA + floorLengthB + floorLengthC) / 2;
-
                         decimal floorExtra = floorHalfPerimeter * ((floorHalfPerimeter - floorLengthA) + (floorHalfPerimeter - floorLengthB) + (floorHalfPerimeter - floorLengthC));
-
-                        double floorAreaV = Math.Sqrt((double)floorExtra);
-
-                        // converting numbers from double to decimal
-
-                      //  decimal floorTotal = (decimal)floorArea * floorPrice;
-
-                      //  decimal flooringTime = (decimal)floorArea / AREA_PER_HOUR;
-
-                      //  decimal flooringWorkCost = flooringTime * COST_TILE;
-
-                      //  decimal totalPrice = flooringWorkCost + floorTotal;
-
-                      //  Console.WriteLine($"Floor area is: {floorArea} sqm. \nThe price for the floor is: {floorTotal:0.00}EUR. \nIt will take {flooringTime:0.00} hours to put the floor. \nThe total cost for work will be {flooringWorkCost:0.00}EUR.\nTotal price: {totalPrice:0.00}EUR ");
-
-                      //  break; // after all inputs were correct, printing the data to the screen and finish program
+                        double floorAreaSqrt = Math.Sqrt((double)floorExtra);
+                        floorArea = (decimal)floorAreaSqrt;
                     }
 
                     else if (answerConverted == 3) // Non-rectangular
                     {
                         Console.WriteLine("Enter floor length a in meters:");
                         decimal floorLengthA = Convert.ToDecimal(Console.ReadLine());
-
                         Console.WriteLine("Enter floor length b in meters:");
                         decimal floorLengthB = Convert.ToDecimal(Console.ReadLine());
-
                         Console.WriteLine("Enter floor height in meters (height is the length from a to b and has 90 degrees corner with the length b or a:");
                         decimal floorLengthH = Convert.ToDecimal(Console.ReadLine());
 
                         floorArea = floorLengthH * (floorLengthA + floorLengthB);
-
-                        // decimal floorTotal = floorArea * floorPrice;
-
-                       // decimal flooringTime = floorArea / AREA_PER_HOUR;
-
-                      //  decimal flooringWorkCost = flooringTime * COST_TILE;
-
-                       // decimal totalPrice = flooringWorkCost + floorTotal;
-
-                      //  Console.WriteLine($"Floor area is: {floorArea} sqm. \nThe price for the floor is: {floorTotal:0.00}EUR. \nIt will take {flooringTime:0.00} hours to put the floor. \nThe total cost for work will be {flooringWorkCost:0.00}EUR.\nTotal price: {totalPrice:0.00}EUR ");
-                        
-                      //  break; // after all inputs were correct, printing the data to the screen and finish program
                     }
 
 
