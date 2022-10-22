@@ -5,13 +5,8 @@ namespace floorSpaceCounter
     {
         static void Main(string[] args)
         {
-            int inputChoise;
-            decimal floorArea;
-            decimal floorTotal;
-            decimal flooringTime;
-            decimal flooringWorkCost;
-            decimal totalPrice;
-            int answerConverted;
+            int inputChoise; // declare variables only for the if statements
+            decimal floorArea;            
 
             while (true) // the program looping until it gets valid user input, then jumps to IF scopes
                 {
@@ -26,9 +21,8 @@ namespace floorSpaceCounter
 
             const decimal COST_TILE = 86; // price for putting floors per hour
             const decimal AREA_PER_HOUR = 1.85806M; // number to show how much sqm can be don in one hour
-            answerConverted = inputChoise;
 
-            if (answerConverted == 1) // Rectangular
+            if (inputChoise == 1) // Rectangular
             {
                 Console.WriteLine("Enter floor width in meters:");
                 decimal floorWidth = Convert.ToDecimal(Console.ReadLine());
@@ -37,7 +31,7 @@ namespace floorSpaceCounter
                 floorArea = floorWidth * floorLength; // counting the floor area in sqm                 
             }
 
-            else if (answerConverted == 2) // Triangle
+            else if (inputChoise == 2) // Triangle
             {
                 Console.WriteLine("Enter floor length a in meters:");
                 decimal floorLengthA = Convert.ToDecimal(Console.ReadLine());
@@ -52,7 +46,7 @@ namespace floorSpaceCounter
                 floorArea = (decimal)floorAreaSqrt;                
             }
             
-            else if (answerConverted == 3) // Non-rectangular
+            else if (inputChoise == 3) // Non-rectangular
             {
                 Console.WriteLine("Enter floor length a in meters:");
                 decimal floorLengthA = Convert.ToDecimal(Console.ReadLine());
@@ -66,11 +60,11 @@ namespace floorSpaceCounter
                     
             Console.WriteLine("Enter floor price per sqm:");
             decimal floorPrice = Convert.ToDecimal(Console.ReadLine());
-
-            floorTotal = floorArea * floorPrice;  // counting price for the tiles or other material
-            flooringTime = floorArea / AREA_PER_HOUR; // counting how much time it will be needed to put floor
-            flooringWorkCost = flooringTime * COST_TILE; // counting the price for the work 
-            totalPrice = flooringWorkCost + floorTotal; // total price for the whole project
+            // initializing variables after the function to be used only if one of the "If" scopes were activated
+            decimal floorTotal = floorArea * floorPrice;  // counting price for the tiles or other material
+            decimal flooringTime = floorArea / AREA_PER_HOUR; // counting how much time it will be needed to put floor
+            decimal flooringWorkCost = flooringTime * COST_TILE; // counting the price for the work 
+            decimal totalPrice = flooringWorkCost + floorTotal; // total price for the whole project
 
             Console.WriteLine($"Floor area is: {floorArea} sqm. \nThe price for the floor is: {floorTotal:0.00}EUR. \nIt will take {flooringTime:0.00} hours to put the floor. \nThe total cost for work will be {flooringWorkCost:0.00}EUR.\nTotal price: {totalPrice:0.00}EUR ");
         }
