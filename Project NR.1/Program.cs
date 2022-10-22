@@ -3,6 +3,9 @@ namespace floorSpaceCounter
 {       // Program number 1
     class Program
     {
+        // constant variable declared out of method to find easily
+        const decimal COST_TILE = 86; // price for putting floors per hour
+        const decimal AREA_PER_HOUR = 1.85806M; // number to show how much sqm can be don in one hour
         static void Main(string[] args)
         {
             int inputChoise; // declare variables only for the if statements
@@ -17,10 +20,7 @@ namespace floorSpaceCounter
                     if (inputChoise !=0 && inputChoise < 4) // valid input must be in between 0 and 4
                         break; //if it is valid it jumps further
                     Console.WriteLine("You entered a wrong number, please try again!"); //looping until user Input is valid
-                }
-
-            const decimal COST_TILE = 86; // price for putting floors per hour
-            const decimal AREA_PER_HOUR = 1.85806M; // number to show how much sqm can be don in one hour
+                }           
 
             if (inputChoise == 1) // Rectangular
             {
